@@ -19,13 +19,13 @@ NodeSecurity works by overriding the Node.JS `require()` function, allowing us t
 ## Usage
 
 ```bash
-npm install node-security
+npm install @matthaywardwebdesign/node-security
 ```
 
 Firstly include NodeSecurity in your project at the very top of your applications entrypoint (before any other requires) and create a new instance.
 
 ```javascript
-  const nodesecurity = require( 'node-security' );
+  const nodesecurity = require( '@matthaywardwebdesign/node-security' );
   const NodeSecurity = new nodesecurity();
 ```
 
@@ -83,7 +83,7 @@ Here's an example script!
 
 ```javascript
 /* Import and create a new instance of NodeSecurity */
-const nodesecurity = require( 'node-security' );
+const nodesecurity = require( '@matthaywardwebdesign/node-security' );
 const NodeSecurity = new nodesecurity();
 
 /* Configure NodeSecurity */
