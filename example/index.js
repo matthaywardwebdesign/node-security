@@ -1,5 +1,5 @@
 /* Import and create a new instance of NodeSecurity */
-const nodesecurity = require( '../dist/index.js' );
+const nodesecurity = require( '@matthaywardwebdesign/node-security' );
 const NodeSecurity = new nodesecurity();
 
 /* Configure NodeSecurity */

@@ -1,6 +1,8 @@
 # NodeSecurity
 :key: The easiest way to control what npm modules can access
 
+<a href="https://www.npmjs.org/package/@matthaywardwebdesign/node-security"><img src="https://img.shields.io/npm/v/@matthaywardwebdesign/node-security.svg?style=flat" alt="npm"></a>
+
 ## Overview
 This repo / package was inspired a Medium post by David Gilbertson - [https://hackernoon.com/npm-package-permissions-an-idea-441a02902d9b](https://hackernoon.com/npm-package-permissions-an-idea-441a02902d9b)
 

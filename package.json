@@ -1,13 +1,17 @@
 {
   "name": "@matthaywardwebdesign/node-security",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": ":key: The easiest way to control what npm modules can access",
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist/ && babel ./src --out-dir dist/ --ignore **/*.test.js,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "test": "mocha --compilers js:babel-core/register --recursive src/"
   },
-  "author": "Matt Hayward",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "author": "Matt Hayward <matt@matthayward.com.au>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
