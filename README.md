@@ -1,3 +1,5 @@
+![NodeSecurity](https://i.imgur.com/08h1RM5.png)
+
 # NodeSecurity
 :key: The easiest way to control what npm modules can access
 
