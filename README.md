@@ -1,4 +1,4 @@
-![NodeSecurity](https://i.imgur.com/08h1RM5.png)
+<img src="https://i.imgur.com/08h1RM5.png" width="500px" alt="NodeSecurity" />
 
 # NodeSecurity
 :key: The easiest way to control what npm modules can access
