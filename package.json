@@ -13,7 +13,7 @@
   ],
   "author": "Matt Hayward <matt@matthayward.com.au>",
   "license": "MIT",
-  "engines" : { 
+  "devEngines" : { 
     "node" : ">=6.16.0" 
   },
   "devDependencies": {
