@@ -5,6 +5,12 @@
 
 <a href="https://www.npmjs.org/package/@matthaywardwebdesign/node-security"><img src="https://img.shields.io/npm/v/@matthaywardwebdesign/node-security.svg?style=flat" alt="npm"></a>
 
+**NOTE:** This package has not gone through any form of security testing! **Please do not use it to ensure security at this time.** Issues questioning the feasability of our current approach are still outstanding.
+- [https://github.com/matthaywardwebdesign/node-security/issues/7](https://github.com/matthaywardwebdesign/node-security/issues/7)
+
+If you're experienced in this area ( I am not ) please contribute!
+
+
 ## Overview
 This repo / package was inspired a Medium post by David Gilbertson - [https://hackernoon.com/npm-package-permissions-an-idea-441a02902d9b](https://hackernoon.com/npm-package-permissions-an-idea-441a02902d9b)
 
