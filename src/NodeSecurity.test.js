@@ -285,4 +285,18 @@ describe( 'NodeSecurity', () => {
     /* Ensure the secret environment variable is not present */
     expect( process.env.SECRET_STUFF ).to.be.undefined;
   });
+
+  it( 'should allow setting env to false to remove all environment variables', () => {
+    /* Set an example value on the process.env object */
+    process.env.SECRET_STUFF = 'Magic';
+    process.env.PUBLIC_STUFF = 'Not magic';
+  
+    /* Configure the NodeSecurity instance */
+    NodeSecurity.configure({
+      env: false,
+    });
+  
+    /* Ensure the public environment variable is still present */
+    expect( Object.keys( process.env ).length ).to.equal( 0 );
+  });
 });

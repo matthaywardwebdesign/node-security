@@ -185,7 +185,7 @@ class NodeSecurity {
      * modify the process.env object to only contain the
      * environment variables specified.
      */
-    if ( this.config.env ) {
+    if ( this.config.env != null ) {
       /* Create a new object that we'll replace process.env with */
       const newEnv = Object
         .keys( this.config.env )
@@ -234,3 +234,6 @@ class NodeSecurity {
 }
 
 export default NodeSecurity;
+
+/* Prevent the prototype being modified */
+Object.freeze( module.exports.default.prototype );

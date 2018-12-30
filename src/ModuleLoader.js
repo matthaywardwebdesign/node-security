@@ -80,3 +80,6 @@ class ModuleLoader {
 };
 
 export default ModuleLoader;
+
+/* Prevent the prototype being modified */
+Object.freeze( module.exports.default.prototype );

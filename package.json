@@ -1,6 +1,6 @@
 {
   "name": "@matthaywardwebdesign/node-security",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": ":key: The easiest way to control what npm modules can access",
   "main": "dist/index.js",
   "scripts": {
