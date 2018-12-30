@@ -3,7 +3,7 @@
 # NodeSecurity
 :key: The easiest way to control what npm modules can access
 
-<a href="https://www.npmjs.org/package/@matthaywardwebdesign/node-security"><img src="https://img.shields.io/npm/v/@matthaywardwebdesign/node-security.svg?style=flat" alt="npm"></a>
+<a href="https://www.npmjs.org/package/@matthaywardwebdesign/node-security"><img src="https://img.shields.io/npm/v/@matthaywardwebdesign/node-security.svg?style=flat" alt="npm"></a> [![CircleCI](https://circleci.com/gh/matthaywardwebdesign/node-security.svg?style=svg)](https://circleci.com/gh/matthaywardwebdesign/node-security)
 
 **NOTE:** This package has not gone through any form of security testing! **Please do not use it to ensure security at this time.** Issues questioning the feasability of our current approach are still outstanding.
 - [https://github.com/matthaywardwebdesign/node-security/issues/7](https://github.com/matthaywardwebdesign/node-security/issues/7)
