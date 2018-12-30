@@ -1,0 +1,62 @@
+version: 2.1
+
+docker_defaults: &docker_defaults
+  docker:
+    - image: circleci/node:8.14.0
+
+commands:
+  prep_env:
+    description: "Check repo and restore environment cache"
+    steps:
+      - checkout:
+          path: ~/repo
+      - restore_cache:
+          name: Restore node_modules cache
+          key: node-security-{{ checksum "package.json" }}-{{ .Branch }}
+  save_env_cache:
+    description: "Saves environment cache"
+    steps:
+      - save_cache:
+          name: Save node_modules cache
+          key: node-security-{{ checksum "package.json" }}-{{ .Branch }}
+          paths:
+            - node_modules/
+
+jobs:
+  node_modules:
+    <<: *docker_defaults
+    working_directory: ~/repo
+    steps:
+      - prep_env
+      - run: npm install
+      - save_env_cache
+  unit_test:
+    <<: *docker_defaults
+    working_directory: ~/repo
+    steps:
+      - prep_env
+      - run: npm run test
+  build:
+    <<: *docker_defaults
+    working_directory: ~/repo
+    steps:
+      - prep_env
+      - run: npm run build
+
+workflows:
+  version: 2
+  node-security:
+    jobs:
+      - node_modules
+      - unit_test:
+          requires:
+            - node_modules
+      - build:
+          requires:
+            - node_modules
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
