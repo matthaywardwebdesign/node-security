@@ -3,13 +3,15 @@
 # NodeSecurity
 :key: The easiest way to control what npm modules can access
 
+<a href="https://www.npmjs.org/package/@matthaywardwebdesign/node-security"><img src="https://img.shields.io/npm/v/@matthaywardwebdesign/node-security.svg?style=flat" alt="npm"></a>
+<a href="https://join.slack.com/t/node-security/shared_invite/enQtNTEzNjM1NzQxNzgwLTljYmJlMWUzYmE5MWUxOWYxODAyNGQzMDA1Yjc5ZDM2Y2NjNDAzMmMwMmI2ZDRlYjE1NzA4ZGQyMmI1NDc5MTU">
+<img src="https://img.shields.io/badge/slack-join-ff69b4.svg?logo=slack" alt="slack" /></a>
 <a href="https://www.npmjs.org/package/@matthaywardwebdesign/node-security"><img src="https://img.shields.io/npm/v/@matthaywardwebdesign/node-security.svg?style=flat" alt="npm"></a> [![CircleCI](https://circleci.com/gh/matthaywardwebdesign/node-security.svg?style=svg)](https://circleci.com/gh/matthaywardwebdesign/node-security)
 
 **NOTE:** This package has not gone through any form of security testing! **Please do not use it to ensure security at this time.** Issues questioning the feasability of our current approach are still outstanding.
 - [https://github.com/matthaywardwebdesign/node-security/issues/7](https://github.com/matthaywardwebdesign/node-security/issues/7)
 
 If you're experienced in this area ( I am not ) please contribute!
-
 
 ## Overview
 This repo / package was inspired a Medium post by David Gilbertson - [https://hackernoon.com/npm-package-permissions-an-idea-441a02902d9b](https://hackernoon.com/npm-package-permissions-an-idea-441a02902d9b)
