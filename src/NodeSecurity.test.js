@@ -299,4 +299,13 @@ describe( 'NodeSecurity', () => {
     /* Ensure the public environment variable is still present */
     expect( Object.keys( process.env ).length ).to.equal( 0 );
   });
+
+  it( 'should block access to process.binding', () => {
+    /* Configure the NodeSecurity instance */
+    NodeSecurity.configure({});
+
+    expect(() => {
+      process.binding( 'fs' );
+    }).to.throw();
+  });
 });

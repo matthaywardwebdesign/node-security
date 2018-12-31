@@ -7,13 +7,23 @@ class ModuleLoader {
 
     /**
      * Store an instance of the original Module._load
-     * functionaliy.
+     * functionality.
      **/
     this.originalLoad = Module._load;
+
+    /**
+     * Store an instance of the original process.binding
+     * functionality.
+     */
+    this.originalBinding = process.binding;
   }
 
   getOriginalLoader = () => {
     return this.originalLoad;
+  }
+
+  getOriginalBinding = () => {
+    return this.originalBinding;
   }
 
   /* Determines whether this module was loaded by a parent module */
@@ -61,6 +71,15 @@ class ModuleLoader {
     return true;
   }
 
+  isBindingAllowed( request ) {
+    /* Check whether we've blocked access to this module */
+    if ( this.config.core[ request ] != null && this.config.core[ request ] === false ) {
+      return false;
+    }
+
+    return true;
+  }
+
   /* Called when a module is attempted to be loaded */
   load = ( request, parent, isMain ) => {
     /* Check whether loading this module is allowed */
@@ -76,6 +95,15 @@ class ModuleLoader {
     const module = this.originalLoad( request, parent, isMain );
 
     return module;
+  }
+
+  /* Called when a binding is attempted to be loaded */
+  binding = ( request ) => {
+    if ( !this.isBindingAllowed( request )) {
+      throw new Error( Errors.ERROR_NOT_ALLOWED_TO_LOAD( request ));
+    }
+
+    return this.originalBinding( request );
   }
 };
 

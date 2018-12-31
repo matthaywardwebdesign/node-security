@@ -203,10 +203,11 @@ class NodeSecurity {
       process.env = newEnv;
     }
 
-    /* Override the Module._load function with our own */
+    /* Override the Module._load function and process.binding with our own */
     if ( !this.moduleLoader ) {
       this.moduleLoader = new ModuleLoader( this.config );
       Module._load = this.moduleLoader.load;
+      process.binding = this.moduleLoader.binding;
     }
 
     /* Finally, record that we've fully configured NodeSecurity */
@@ -228,6 +229,7 @@ class NodeSecurity {
     /* Only do the reset if required */
     if ( this.moduleLoader ) {
       Module._load = this.moduleLoader.getOriginalLoader();
+      process.binding = this.moduleLoader.getOriginalBinding();
       this.configured = false;
     }
   }
