@@ -317,4 +317,13 @@ describe( 'NodeSecurity', () => {
       process._linkedBinding( 'fs' );
     }).to.throw();
   });
+
+  it( 'should block access to process.dlOpen when sharedObjects = false', () => {
+    /* Configure the NodeSecurity instance */
+    NodeSecurity.configure({});
+
+    expect(() => {
+      process.dlopen( 'Test' );
+    }).to.throw();
+  });
 });

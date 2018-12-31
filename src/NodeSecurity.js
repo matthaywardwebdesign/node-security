@@ -117,6 +117,11 @@ class NodeSecurity {
         vm: NodeSecurityPlugin,
         zlib: NodeSecurityPlugin,
       },
+      /**
+       * The nativeModules config option blocks
+       * access to loading C++ Addons
+       */
+      sharedObjects: false,
     };
 
     /**
@@ -139,6 +144,8 @@ class NodeSecurity {
 
     /* Combine the default config with the user provided config */
     this.config = {
+      ...this.config,
+      ...userConfig,
       core: { ...this.config.core, ...userConfig.core || {}},
       module: { ...this.config.module, ...userConfig.module || {}},
       env: userConfig.env,
@@ -209,6 +216,17 @@ class NodeSecurity {
       Module._load = this.moduleLoader.load;
       process.binding = this.moduleLoader.binding;
       process._linkedBinding = this.moduleLoader.linkedBinding;
+
+      /**
+       * If the 'sharedObjects' config option isn't set to true
+       * disable the loading of C++ addons by protecting the
+       * process.dlopen function.
+       */
+      if ( !this.config.sharedObjects ) {
+        process.dlopen = module => {
+          throw new Error( Errors.ERROR_NOT_ALLOWED_TO_LOAD_SHARED_OBJECTS( module ));
+        }
+      }
     }
 
     /* Finally, record that we've fully configured NodeSecurity */

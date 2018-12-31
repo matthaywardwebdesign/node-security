@@ -80,7 +80,13 @@ NodeSecurity.configure({
   env: {
     API_KEY: true,
     API_HOST: true,
-  }
+  },
+  /**
+   * The 'sharedObjects' section controls whether
+   * or not C++ addons can be loaded. Defaults to
+   * false
+   */
+  sharedObjects: false,
 });
 ```
 
