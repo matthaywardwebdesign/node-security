@@ -203,11 +203,12 @@ class NodeSecurity {
       process.env = newEnv;
     }
 
-    /* Override the Module._load function and process.binding with our own */
+    /* Override the Module._load function, process.binding and process._linkedBinding with our own */
     if ( !this.moduleLoader ) {
       this.moduleLoader = new ModuleLoader( this.config );
       Module._load = this.moduleLoader.load;
       process.binding = this.moduleLoader.binding;
+      process._linkedBinding = this.moduleLoader.linkedBinding;
     }
 
     /* Finally, record that we've fully configured NodeSecurity */
@@ -230,6 +231,7 @@ class NodeSecurity {
     if ( this.moduleLoader ) {
       Module._load = this.moduleLoader.getOriginalLoader();
       process.binding = this.moduleLoader.getOriginalBinding();
+      process._linkedBinding = this.moduleLoader.getOriginalLinkedBinding();
       this.configured = false;
     }
   }

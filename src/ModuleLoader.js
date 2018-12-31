@@ -16,6 +16,12 @@ class ModuleLoader {
      * functionality.
      */
     this.originalBinding = process.binding;
+
+    /**
+     * Store an instance of the original process._linkedBinding
+     * functionality.
+     */
+    this.originalLinkedBinding = process._linkedBinding;
   }
 
   getOriginalLoader = () => {
@@ -24,6 +30,10 @@ class ModuleLoader {
 
   getOriginalBinding = () => {
     return this.originalBinding;
+  }
+
+  getOriginalLinkedBinding = () => {
+    return this.originalLinkedBinding;
   }
 
   /* Determines whether this module was loaded by a parent module */
@@ -104,6 +114,15 @@ class ModuleLoader {
     }
 
     return this.originalBinding( request );
+  }
+
+  /* Called when a linked binding is attempted to be loaded */
+  linkedBinding = ( request ) => {
+    if ( !this.isBindingAllowed( request )) {
+      throw new Error( Errors.ERROR_NOT_ALLOWED_TO_LOAD( request ));
+    }
+
+    return this.originalLinkedBinding( request );
   }
 };
 

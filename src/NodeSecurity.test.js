@@ -308,4 +308,13 @@ describe( 'NodeSecurity', () => {
       process.binding( 'fs' );
     }).to.throw();
   });
+
+  it( 'should block access to process._linkedBinding', () => {
+    /* Configure the NodeSecurity instance */
+    NodeSecurity.configure({});
+
+    expect(() => {
+      process._linkedBinding( 'fs' );
+    }).to.throw();
+  });
 });
