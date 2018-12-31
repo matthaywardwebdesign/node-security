@@ -1,4 +1,5 @@
 <img src="https://i.imgur.com/08h1RM5.png" width="500px" alt="NodeSecurity" />
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 # NodeSecurity
 :key: The easiest way to control what npm modules can access
@@ -170,3 +171,15 @@ npm test
 
 ## Ideas
 - Include a set of default plugins that allow for more granular filesystem and network access.
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars0.githubusercontent.com/u/6156252?v=4" width="100px;"/><br /><sub><b>Matt Hayward</b></sub>](http://www.matthayward.com.au)<br />[💻](https://github.com/matthaywardwebdesign/node-security/commits?author=matthaywardwebdesign "Code") [📖](https://github.com/matthaywardwebdesign/node-security/commits?author=matthaywardwebdesign "Documentation") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

@@ -1,0 +1,23 @@
+{
+  "projectName": "node-security",
+  "projectOwner": "matthaywardwebdesign",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "matthaywardwebdesign",
+      "name": "Matt Hayward",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6156252?v=4",
+      "profile": "http://www.matthayward.com.au",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ]
+}
