@@ -1,5 +1,5 @@
 <img src="https://i.imgur.com/08h1RM5.png" width="500px" alt="NodeSecurity" />
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 # NodeSecurity
 :key: The easiest way to control what npm modules can access
@@ -178,8 +178,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/6156252?v=4" width="100px;"/><br /><sub><b>Matt Hayward</b></sub>](http://www.matthayward.com.au)<br />[💻](https://github.com/matthaywardwebdesign/node-security/commits?author=matthaywardwebdesign "Code") [📖](https://github.com/matthaywardwebdesign/node-security/commits?author=matthaywardwebdesign "Documentation") |
-| :---: |
+| [<img src="https://avatars0.githubusercontent.com/u/6156252?v=4" width="100px;"/><br /><sub><b>Matt Hayward</b></sub>](http://www.matthayward.com.au)<br />[💻](https://github.com/matthaywardwebdesign/node-security/commits?author=matthaywardwebdesign "Code") [📖](https://github.com/matthaywardwebdesign/node-security/commits?author=matthaywardwebdesign "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/3534236?v=4" width="100px;"/><br /><sub><b>Jake Bolam</b></sub>](https://jakebolam.com)<br />[🚇](#infra-jakebolam "Infrastructure (Hosting, Build-Tools, etc)") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
