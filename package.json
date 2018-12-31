@@ -4,6 +4,7 @@
   "description": ":key: The easiest way to control what npm modules can access",
   "main": "dist/index.js",
   "scripts": {
+    "add-contributor": "all-contributors add",
     "build": "rimraf dist/ && babel ./src --out-dir dist/ --ignore **/*.test.js,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "test": "mocha --compilers js:babel-core/register --recursive src/"
   },
@@ -14,6 +15,7 @@
   "author": "Matt Hayward <matt@matthayward.com.au>",
   "license": "MIT",
   "devDependencies": {
+    "all-contributors-cli": "^5.5.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
