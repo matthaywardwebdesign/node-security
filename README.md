@@ -1,5 +1,4 @@
 <img src="https://i.imgur.com/08h1RM5.png" width="500px" alt="NodeSecurity" />
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 # NodeSecurity
 :key: The easiest way to control what npm modules can access
@@ -7,7 +6,7 @@
 <a href="https://www.npmjs.org/package/@matthaywardwebdesign/node-security"><img src="https://img.shields.io/npm/v/@matthaywardwebdesign/node-security.svg?style=flat" alt="npm"></a>
 <a href="https://circleci.com/gh/matthaywardwebdesign/node-security"><img alt="build" src="https://img.shields.io/circleci/project/github/matthaywardwebdesign/node-security/master.svg"/></a>
 <a href="https://join.slack.com/t/node-security/shared_invite/enQtNTEzNjM1NzQxNzgwLTljYmJlMWUzYmE5MWUxOWYxODAyNGQzMDA1Yjc5ZDM2Y2NjNDAzMmMwMmI2ZDRlYjE1NzA4ZGQyMmI1NDc5MTU"><img src="https://img.shields.io/badge/slack-join-ff69b4.svg?logo=slack" alt="slack" /></a>
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 **NOTE:** This package has not gone through any form of security testing! **Please do not use it to ensure security at this time.** Issues questioning the feasability of our current approach are still outstanding.
 - [https://github.com/matthaywardwebdesign/node-security/issues/7](https://github.com/matthaywardwebdesign/node-security/issues/7)
@@ -27,7 +26,7 @@ With the exception of some small differences, like not using package.json to man
 attempts to accomplish this goal.
 
 ## How it works
-NodeSecurity works by overriding the Node.JS `require()` function, allowing us to enforce access constraints. 
+NodeSecurity works by overriding the Node.JS `require()` function, allowing us to enforce access constraints.
 
 ## Usage
 
@@ -141,7 +140,7 @@ os.arch();
 
 ## Plugins
 
-You can extend the functionality of NodeSecurity by creating a plugin. For example you could create a plugin to allow http/s requests to only be made to specific servers. 
+You can extend the functionality of NodeSecurity by creating a plugin. For example you could create a plugin to allow http/s requests to only be made to specific servers.
 
 An example plugin can be found at `src/plugins/NodeSecurityPlugin.js`
 
